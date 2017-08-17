@@ -1,0 +1,1 @@
+window.locations = [{"name":"Niterói"},{"name":"Saquarema"}]

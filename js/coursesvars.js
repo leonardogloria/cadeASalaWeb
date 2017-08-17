@@ -1,0 +1,1 @@
+window.courses = [{"name":"Geografia","location":"Niterói"},{"name":"Pedagogia","location":"Niterói"},{"name":"Tecnólogo em Segurança Pública e Social","location":"Niterói"},{"name":"Tecnologia em Gestão de Turísmo","location":"Niterói"},{"name":"Tecnologia em Sistemas de Computação","location":"Niterói"}]

@@ -1,0 +1,99 @@
+<div class="container">
+  <div class="row discipline-content">
+    <h1>Informações sobre Cursos / Disciplinas</h1>
+
+    <div class="form-group">
+      <select id="selectLocation" ng-options="location as location.nome for Items in coursesService.locations" ng-model="selected.location" class="form-control" ng-change="updateSelectedLocation()">
+        <option value="">Selecione o seu Polo</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <select id="selectCourse" ng-options="course as course.name for course in courses" ng-model="selected.course" class="form-control" ng-change="updateSelectedCourse()" ng-if="selected.location">
+        <option value="">Selecione o seu curso</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <select id="selectCourse" ng-options="discipline as discipline.name for discipline in disciplines" ng-model="selected.discipline" class="form-control" ng-change="updateSelectedDiscipline()" ng-if="selected.course">
+        <option value="">Selecione a sua disciplina</option>
+      </select>
+    </div>
+
+    <h2 ng-if="selected.location">{{ selected.location.name }}</h1>
+
+    <h3 ng-if="selected.course">{{ selected.course.name }}</h1>
+
+    <div ng-if="selected.discipline" class="discipline-block">
+      <div class="header">
+        <h4>{{ selected.discipline.name }}</h4>
+      </div>
+
+      <div class="row card">
+        <div class="col-lg-12">
+          <h4>Informações</h4>
+
+          <p>Tutor: {{ selected.discipline.tutor }}</p>
+
+          <h5>AD1 - Data de entrega: {{ selected.discipline.ad1_date }}</h5>
+
+          <h5>AD2 - Data de entrega: {{ selected.discipline.ad2_date }}</h5>
+        </div>
+      </div>
+
+      <div class="row card" ng-if="selected.discipline.ap1_date">
+        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-2">
+          <div class="date">
+            <span class="day">{{ selected.discipline.ap1_date.format('DD') }}</span>
+            <span class="month">{{ selected.discipline.ap1_date.format('MMM') }}</span>
+          </div>
+        </div>
+        <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 details">
+          <div class="col-lg-1 col-md-1 col-sm-1 col-xs-2 type">
+            AP1
+          </div>
+          <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10">
+            <p>Local: {{ selected.discipline.ap1_local }}</p>
+            <p>Hora: {{ selected.discipline.ap1_time }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row card" ng-if="selected.discipline.ap2_date">
+        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-2">
+          <div class="date">
+            <span class="day">{{ selected.discipline.ap2_date.format('DD') }}</span>
+            <span class="month">{{ selected.discipline.ap2_date.format('MMM') }}</span>
+          </div>
+        </div>
+        <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 details">
+          <div class="col-lg-1 col-md-1 col-sm-1 col-xs-2 type">
+            AP2
+          </div>
+          <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10">
+            <p>Local: {{ selected.discipline.ap2_local }}</p>
+            <p>Hora: {{ selected.discipline.ap2_time }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row card" ng-if="selected.discipline.ap3_date">
+        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-2">
+          <div class="date">
+            <span class="day">{{ selected.discipline.ap3_date.format('DD') }}</span>
+            <span class="month">{{ selected.discipline.ap3_date.format('MMM') }}</span>
+          </div>
+        </div>
+        <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 details">
+          <div class="col-lg-1 col-md-1 col-sm-1 col-xs-2 type">
+            AP3
+          </div>
+          <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10">
+            <p>Local: {{ selected.discipline.ap3_local }}</p>
+            <p>Hora: {{ selected.discipline.ap3_time }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

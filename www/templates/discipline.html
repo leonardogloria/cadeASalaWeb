@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="row">
+    <h1>{{ discipline.name }}</h1>
+    
+    <div class="col-lg-4">
+      <h2>Informações</h2>
+
+      <div class="info">
+        <p>Polo: {{ discipline.location }}</p>
+        <p>Tutor: {{ discipline.tutor }}</p>
+        <p>Datas de tutoria</p>
+        <hr>
+      </div>
+
+      <h2>ADs</h2>
+
+      <div class="info">
+        <h3>AD1</h3>
+
+        <p>Prazo de entrega AD1: {{ discipline.ad1_date }}</p>
+        <hr>
+      </div>
+
+      <div class="info">
+        <h3>AD2</h3>
+
+        <p>Prazo de entrega AD2: {{ discipline.ad2_date }}</p>
+        <hr>
+      </div>
+    </div>
+
+    <div class="col-lg-4">
+      <h2>APs</h2>
+
+      <div class="info">
+        <h3>AP1</h3>
+
+        <p>Data AP1: {{ discipline.ap1_date }}</p>
+        <p>Local da AP1: {{ discipline.ap1_local }}</p>
+        <p>Hora AP1: {{ discipline.ap1_time }}</p>
+        <hr>
+      </div>
+
+      <div class="info">
+        <h3>AP2</h3>
+
+        <p>Data AP2: {{ discipline.ap2_date }}</p>
+        <p>Local da AP2: {{ discipline.ap2_local }}</p>
+        <p>Hora AP2: {{ discipline.ap2_time }}</p>
+        <hr>
+      </div>
+
+      <div class="info">
+        <h3>AP3</h3>
+
+        <p>Data AP3: {{ discipline.ap3_date }}</p>
+        <p>Local da AP3: {{ discipline.ap3_local }}</p>
+        <p>Hora AP3: {{ discipline.ap3_time }}</p>
+        <hr>
+      </div>
+    </div>
+  </div>
+</div>

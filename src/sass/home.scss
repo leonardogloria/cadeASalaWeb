@@ -1,0 +1,76 @@
+body {
+  font-weight: bold;
+  background-color: #C9E3F8;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+.title {
+  padding: 45px 0;
+  @media only screen and (max-width : 320px) {
+    padding: 0;
+  }
+  @media (max-width: 767px) {
+    padding: 0;
+  }
+}
+
+.discipline-content {
+  margin-top: 10px;
+  margin-bottom: 30px;
+
+  .discipline-block {
+    margin: 10px 0;
+    position: relative;
+
+    .header {
+      background-color: #65A1D5;
+      padding: 10px 10px;
+      font-size: 18px;
+      line-height: 23px;
+      min-height: 60px;
+      margin-bottom: 25px;
+      box-shadow: 2px 2px 2px #888888;
+    }
+
+    .card {
+      background-color: #FFF;
+      margin: 10px 0;
+      box-shadow: 2px 2px 2px #888888;
+
+      .date {
+        font-size: 20px;
+        padding: 5px 0;
+        text-align: center;
+        
+        .day {
+          display: block;
+        }
+
+        .month {
+          font-size: 15px;
+        }
+      }
+
+      .details {
+        margin-top: 12px;
+        
+        .type {
+          font-size: 18px;
+          padding: 10px 0;
+        }
+
+        p {
+          margin: 0;
+        }
+
+        &.tutorship {
+          padding: 22px 22px;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}

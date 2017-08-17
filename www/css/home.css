@@ -1,0 +1,52 @@
+body {
+  font-weight: bold;
+  background-color: #C9E3F8; }
+
+h6 {
+  font-size: 16px; }
+
+.title {
+  padding: 45px 0; }
+  @media only screen and (max-width: 320px) {
+    .title {
+      padding: 0; } }
+  @media (max-width: 767px) {
+    .title {
+      padding: 0; } }
+
+.discipline-content {
+  margin-top: 10px;
+  margin-bottom: 30px; }
+  .discipline-content .discipline-block {
+    margin: 10px 0;
+    position: relative; }
+    .discipline-content .discipline-block .header {
+      background-color: #65A1D5;
+      padding: 10px 10px;
+      font-size: 18px;
+      line-height: 23px;
+      min-height: 60px;
+      margin-bottom: 25px;
+      box-shadow: 2px 2px 2px #888888; }
+    .discipline-content .discipline-block .card {
+      background-color: #FFF;
+      margin: 10px 0;
+      box-shadow: 2px 2px 2px #888888; }
+      .discipline-content .discipline-block .card .date {
+        font-size: 20px;
+        padding: 5px 0;
+        text-align: center; }
+        .discipline-content .discipline-block .card .date .day {
+          display: block; }
+        .discipline-content .discipline-block .card .date .month {
+          font-size: 15px; }
+      .discipline-content .discipline-block .card .details {
+        margin-top: 12px; }
+        .discipline-content .discipline-block .card .details .type {
+          font-size: 18px;
+          padding: 10px 0; }
+        .discipline-content .discipline-block .card .details p {
+          margin: 0; }
+        .discipline-content .discipline-block .card .details.tutorship {
+          padding: 22px 22px;
+          margin-top: 0; }

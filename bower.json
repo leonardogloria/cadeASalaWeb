@@ -1,0 +1,17 @@
+{
+  "name": "cederj-calendar",
+  "version": "0.0.1",
+  "description": "Cederj Calendar",
+  "dependencies": {
+    "angular": "~1.5.5",
+    "angular-ui-router": "0.2.18",
+    "angular-local-storage": "0.2.7",
+    "angular-resource": "~1.5.0",
+    "underscore": "1.8.3",
+    "ng-dialog": "0.6.2",
+    "font-awesome": "fontawesome#~4.6.3",
+    "bootstrap-css-only": "~3.3.6",
+    "angular-mocks": "~1.4.3",
+    "moment": "^2.14.1"
+  }
+}

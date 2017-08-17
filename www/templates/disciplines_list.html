@@ -1,0 +1,107 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3 col-md-4 col-sm-5">
+      <img src="img/rsz_logo-02.png" alt="Cadê a Sala">
+    </div>
+    <div class="col-lg-9 col-md-8 col-sm-7 title">
+      <h1>Encontre agora o que procura!</h1>
+    </div>
+  </div>
+  <div class="row discipline-content">
+
+    <div class="form-group">
+      <select id="selectLocation" ng-options="location as location.nome for location in locations" ng-model="selected.location" class="form-control" ng-change="updateSelectedLocation()">
+        <option value="">Selecione a sua Localização</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <select id="selectCourse" ng-options="course as course.name for course in courses" ng-model="selected.course" class="form-control" ng-change="updateSelectedCourse()" ng-if="selected.location">
+        <option value="">Selecione o seu Curso</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <select id="selectCourse" ng-options="discipline as discipline.discipline_name for discipline in courseDisciplines" ng-model="selected.discipline" class="form-control" ng-if="selected.course">
+        <option value="">Selecione a sua Disciplina</option>
+      </select>
+    </div>
+
+    <h2 ng-if="selected.location">{{ selected.location.name }}</h1>
+
+    <h3 ng-if="selected.course">{{ selected.course.name }}</h1>
+
+    <div ng-if="selected.discipline" class="discipline-block">
+      <div class="header">
+        <h4>{{ selected.discipline.discipline_name }}</h4>
+      </div>
+
+      <div class="row card" ng-show="!isEmpty(selected.discipline.presencial_tutor)">
+        <div class="col-lg-12">
+          <h4>Informações</h4>
+
+          <p>Tutor: {{ selected.discipline.presencial_tutor }}</p>
+
+          <h5>AD1 - Prazo de entrega: {{ selected.discipline.ad1_deadline  }}</h5>
+
+          <h5>AD2 - Prazo de entrega: {{ selected.discipline.ad2_deadline  }}</h5>
+
+          <h5>Horário: {{ selected.discipline.tutorship_time }}</h5>
+
+          <h5>Sala: {{ selected.discipline.tutorship_room }}</h5>
+        </div>
+      </div>
+
+      <div class="row card" ng-show="!isEmpty(selected.discipline.ap1)">
+        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-2">
+          <div class="details type date" >
+            <span class="">{{ selected.discipline.ap1.date }}</span>
+          </div>
+        </div>
+        <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 details">
+          <div class="col-lg-1 col-md-1 col-sm-1 col-xs-2 type">
+            AP1
+          </div>
+          <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10">
+            <p>Local: {{ selected.discipline.ap1.local }}</p>
+            <p>Hora: {{ selected.discipline.ap1.time }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row card" ng-show="!isEmpty(selected.discipline.ap2)">
+        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-2">
+          <div class="date">
+            <span class="day details type">{{ selected.discipline.ap2.date  }}</span>
+          </div>
+        </div>
+        <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 details">
+          <div class="col-lg-1 col-md-1 col-sm-1 col-xs-2 type">
+            AP2
+          </div>
+          <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10">
+            <p>Local: {{ selected.discipline.ap2.local }}</p>
+            <p>Hora: {{ selected.discipline.ap2.time  }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row card" ng-show="!isEmpty(selected.discipline.ap3.date)">
+        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-2">
+          <div class="date details type">
+            <span class="day">{{ selected.discipline.ap3.date  }}</span>
+          </div>
+        </div>
+        <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 details">
+          <div class="col-lg-1 col-md-1 col-sm-1 col-xs-2 type">
+            AP3
+          </div>
+          <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10">
+            <p>Local: {{ selected.discipline.ap3.local }}</p>
+            <p>Hora: {{ selected.discipline.ap3.time  }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

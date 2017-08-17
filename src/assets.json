@@ -1,0 +1,23 @@
+{
+  "css": [
+    "lib/bootstrap-css-only/css/bootstrap.min",
+    "lib/font-awesome/css/font-awesome.min",
+    "sass/home"
+  ],
+
+  "js": [
+    "lib/angular/angular.min",
+    "lib/angular-ui-router/release/angular-ui-router.min",
+    "lib/angular-local-storage/dist/angular-local-storage.min",
+    "lib/angular-resource/angular-resource",
+    "lib/underscore/underscore-min",
+    "lib/moment/min/moment.min",
+    "lib/moment/min/locales.min",
+    "js/app",
+    "js/data/*",
+    "js/controllers/*",
+    "js/resources/*",
+    "js/services/*",
+    "js/factories/*"
+  ]
+}
